@@ -1,0 +1,60 @@
+.main-header-container {
+    position: relative;
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    padding: 0 20% 0 20%;
+    gap: 5rem;
+    z-index: 100;
+    animation: slideInFromTop 1s ease-in-out;
+
+}
+
+.header-ul {
+    font-family: var(--main-font); 
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 2rem;
+    padding: 0;
+}
+
+.header-ul li {
+    padding: 0.4rem 0.5rem;
+    cursor: pointer;
+    transition: all 0.15s ease-in   ;
+}
+
+.header-ul a{
+    color: white;
+   text-decoration: none;
+}
+
+.header-ul li:hover {
+    color: #9db9dd;
+}
+
+.logo-and-name-section{
+    padding: 0.5rem 0;
+    color: #9db9dd;
+    font-family: var(--logo-font);
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+@keyframes slideInFromTop {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+
+
+

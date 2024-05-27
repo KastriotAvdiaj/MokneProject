@@ -1,0 +1,23 @@
+:root{
+  --main-bg-color : #012363;
+  --secondary-bg-color : #E8F5F9;
+  --main-font : "Roboto", sans-serif;
+  --font-number-2 : "Platypi", serif;
+  --font-number-4 : 'Poetsen One';
+  --font-number-4 : "Jacquard 12", system-ui;
+  --font-number-5 :"Concert One", sans-serif;
+  --logo-font: "Poetsen One", sans-serif;
+}
+
+body{
+  background-color: var(--secondary-bg-color);
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--main-font);
+  /* font-family: var(--font-number-5); */
+  /* font-family: var(--fun-font); */
+  /* font-family: var(--main-font2); */
+  /* font-family: var(--secondary-font); */
+
+}
