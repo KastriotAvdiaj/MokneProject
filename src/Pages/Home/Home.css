@@ -1,53 +1,58 @@
+
 .video-container {
   position: relative;
-  width: 100%;
-  height: auto; /* Ensure the container is as tall as the viewport */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  overflow: hidden;
+ 
 }
 
 .background-video {
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh; 
+  height: 1000px;
   object-fit: cover;
-  position: relative; 
-  transform: scale(1.1);
+  z-index: -1;
 }
-
+.on-top-div{
+  height: 1000px;
+}
+  
 .mokne-paragraph {
-  height: 90vh;
+  position: absolute;
+  margin-top: 8rem;
+  height: auto;
   width: 100%;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: bolder;
   color: rgba(209, 103, 42, 0.329);
   -webkit-text-stroke: 3px rgb(243, 243, 243);
   font-size: 240px;
-  z-index: 100;
+  z-index: 6;
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: slideInFromLeft 2s ease-in-out;
+  animation: fadeIn 2s ease-in-out;
 }
 
-.mokne-paragraph2 {
-  margin-bottom: 19rem;
-}
-
-.mokne-image {
+.mokne-image{
   height: 400px;
-  position: relative;
 }
 
-@keyframes slideInFromLeft {
+.image-container {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes fadeIn {
   0% {
-    transform: translateX(-100%);
+    opacity: 0;
+  }
+  50%{
+    opacity: 0.5; 
   }
   100% {
-    transform: translateX(0);
+    opacity: 1;
   }
 }
 

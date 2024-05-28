@@ -1,0 +1,18 @@
+.header-wrap{
+    width: 99%;
+    position: fixed;
+    height: 86px;
+    z-index: 7;
+    background-color: rgba(0, 0, 0, 0.39);
+    backdrop-filter: blur(6px);
+    animation: slideInFromTop 1s ease-in-out;
+}
+
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}

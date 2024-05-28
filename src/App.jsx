@@ -7,7 +7,9 @@ import { AboutUs } from "./Pages/About Us/AboutUs";
 function App() {
   return (
     <BrowserRouter>
-      <Header />
+      <div className="header-wrap">
+        <Header />
+      </div>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about-us" element={<AboutUs />} />
