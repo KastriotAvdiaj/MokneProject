@@ -78,6 +78,20 @@
   background-size: 60px 60px;
 }
 
+.progress-bar {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background: rgb(38, 0, 255);
+  transform-origin: 0%;
+}
+
+.third-content{
+  height: 1000px;
+}
 
 @keyframes fadeIn {
   0% {

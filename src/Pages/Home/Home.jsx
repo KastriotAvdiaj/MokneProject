@@ -1,5 +1,5 @@
 import React from "react";
-import { motion, useAnimation } from "framer-motion";
+import { useScroll, useSpring, motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Mokne3 from "../../assets/final7-vmake.mp4";
 import "./Home.css";
@@ -46,59 +46,70 @@ const Home = () => {
     },
   };
 
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001,
+  });
+
   return (
-    <div className="video-container">
-      <video autoPlay muted loop className="background-video">
-        <source src={Mokne3} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-      <div className="on-top-div">
-        <div className="mokne-paragraph">
-          {/* <p className="mokne-paragraph2">MOKNE</p> */}
-        </div>
-      </div>
-      <div className="pattern-background">
-        <motion.div
-          ref={ref}
-          initial="hidden"
-          animate={controls}
-          variants={revealAnimation}
-          className="image-container"
-        >
-          <img src={mokneImage} alt="Mokne Bottle" className="mokne-image" />
-          <div className="parahraph-div">
-            <div className="parahraph-div2">
-              <motion.p
-                initial="initial"
-                animate="animate"
-                variants={waveAnimation}
-              >
-                Shijojeni
-              </motion.p>
-              <motion.p
-                initial="initial"
-                animate="animate"
-                variants={waveAnimation}
-              >
-                ujin
-              </motion.p>
-            </div>
-            <motion.p
-              initial="initial"
-              animate="animate"
-              variants={waveAnimation}
-            >
-              nga <br /> Burimi i Istogut
-            </motion.p>
-            <motion.p
-              initial="initial"
-              animate="animate"
-              variants={waveAnimation}
-            ></motion.p>
+    <>
+      <motion.div className="progress-bar" style={{ scaleX }} />
+      <div className="video-container">
+        <video autoPlay muted loop className="background-video">
+          <source src={Mokne3} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div className="on-top-div">
+          <div className="mokne-paragraph">
+            {/* <p className="mokne-paragraph2">MOKNE</p> */}
           </div>
-        </motion.div>
+        </div>
+        <div className="pattern-background">
+          <motion.div
+            ref={ref}
+            initial="hidden"
+            animate={controls}
+            variants={revealAnimation}
+            className="image-container"
+          >
+            <img src={mokneImage} alt="Mokne Bottle" className="mokne-image" />
+            <div className="parahraph-div">
+              <div className="parahraph-div2">
+                <motion.p
+                  initial="initial"
+                  animate="animate"
+                  variants={waveAnimation}
+                >
+                  Shijojeni
+                </motion.p>
+                <motion.p
+                  initial="initial"
+                  animate="animate"
+                  variants={waveAnimation}
+                >
+                  ujin
+                </motion.p>
+              </div>
+              <motion.p
+                initial="initial"
+                animate="animate"
+                variants={waveAnimation}
+              >
+                nga <br /> Burimi i Istogut
+              </motion.p>
+              <motion.p
+                initial="initial"
+                animate="animate"
+                variants={waveAnimation}
+              ></motion.p>
+            </div>
+          </motion.div>
+        </div>
+        <div className="third-content"></div>
       </div>
-    </div>
+    </>
   );
 };
 
