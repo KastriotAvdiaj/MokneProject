@@ -37,12 +37,47 @@
 
 .mokne-image{
   height: 400px;
+ box-shadow: 4px 5px 8px black;
 }
 
 .image-container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  font-size: 70px;
+  font-weight: bolder;
+  text-shadow: -2px -2px 0 rgb(0, 0, 0), 2px -2px 0 rgb(0, 0, 0), -2px 2px 0 rgb(0, 0, 0), 2px 2px 0 rgb(0, 0, 0);
+  font-family: var(--font-number-6);
+  padding: 2rem;
   position: relative;
   z-index: 1;
+  color: rgb(255, 255, 255);
 }
+
+.parahraph-div{
+  display: flex;
+  flex-direction: column;
+}
+
+.parahraph-div2{
+  display: flex;
+  gap: 1.3rem;
+}
+
+.parahraph-div p{
+  margin: 0;
+  padding: 0;
+}
+
+.pattern-background {
+  background-color: #1f1f75;
+  opacity: 0.8;
+  background-image: 
+    repeating-linear-gradient(0deg, #ffffffb4, #ffffff85 1px, transparent 1px, transparent 60px),
+    repeating-linear-gradient(90deg, #ffffff86, #ffffff85 1px, transparent 1px, transparent 60px);
+  background-size: 60px 60px;
+}
+
 
 @keyframes fadeIn {
   0% {
