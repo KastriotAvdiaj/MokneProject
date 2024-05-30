@@ -1,12 +1,11 @@
-import React from "react";
-import { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useScroll, useSpring, motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Mokne3 from "../../assets/final7-vmake.mp4";
-import bottle from "../../assets/mountains.jpg";
-import Burimi from "../../assets/burimiIstogut.jpg"
-import "./Home.css";
 import mokneImage from "../../assets/bootleMokne.jpg";
+import bottle from "../../assets/bottleMokne.png";
+import Burimi from "../../assets/burimiIstogut.jpg";
+import "./Home.css";
 
 const waveAnimation = {
   initial: { y: 0, x: 0 },
@@ -29,11 +28,9 @@ const Home = () => {
     threshold: 0.5,
   });
 
-  const [visibleParagraphs, setVisibleParagraphs] = useState([
-    false,
-    false,
-    false,
-  ]);
+  const [visibleParagraphs, setVisibleParagraphs] = useState([false, false, false]);
+
+  const patternBackgroundRef = useRef(null);
 
   useEffect(() => {
     if (inView) {
@@ -70,6 +67,19 @@ const Home = () => {
     restDelta: 0.001,
   });
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      const parallaxSpeed = 0.5;
+      if (patternBackgroundRef.current) {
+        patternBackgroundRef.current.style.backgroundPositionY = `${-scrollPosition * parallaxSpeed}px`;
+      }
+    };
+  
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <>
       <motion.div className="progress-bar" style={{ scaleX }} />
@@ -79,7 +89,7 @@ const Home = () => {
           Your browser does not support the video tag.
         </video>
         <div className="on-top-div"></div>
-        <div className="pattern-background">
+        <div className="pattern-background" ref={patternBackgroundRef}>
           <motion.div
             ref={ref}
             initial="hidden"
@@ -129,7 +139,9 @@ const Home = () => {
             </div>
           </motion.div>
         </div>
-        <div className="third-content"><img src="" alt="" /></div>
+        <div className="third-content">
+          {/* <img src={bottle} className="mokne-bottle-image" /> */}
+        </div>
       </div>
     </>
   );
