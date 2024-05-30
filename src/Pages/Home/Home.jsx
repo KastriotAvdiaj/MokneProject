@@ -3,7 +3,8 @@ import { useEffect, useState } from "react";
 import { useScroll, useSpring, motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Mokne3 from "../../assets/final7-vmake.mp4";
-import image from "../../assets/mountains.jpg";
+import bottle from "../../assets/mountains.jpg";
+import Burimi from "../../assets/burimiIstogut.jpg"
 import "./Home.css";
 import mokneImage from "../../assets/bootleMokne.jpg";
 
@@ -128,7 +129,7 @@ const Home = () => {
             </div>
           </motion.div>
         </div>
-        <div className="third-content"></div>
+        <div className="third-content"><img src="" alt="" /></div>
       </div>
     </>
   );
