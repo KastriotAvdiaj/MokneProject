@@ -97,7 +97,7 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 10px;
+  height: 5px;
   background: rgb(0, 89, 255);
  /* box-shadow: 4px 5px 16px black; */
   transform-origin: 0%;
@@ -119,3 +119,18 @@
   }
 }
 
+@media (max-width: 1540px) {
+  .image-container {
+    gap: 4rem;
+    font-size: 50px;
+  }
+
+  .mokne-image{
+    height: 300px;
+   box-shadow: 4px 5px 8px black;
+  }
+
+  .mokne-paragraph {
+    font-size: 150px;
+  }
+}
