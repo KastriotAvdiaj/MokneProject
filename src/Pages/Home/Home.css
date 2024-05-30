@@ -67,6 +67,7 @@
   font-weight: bolder;
   /* text-shadow: -2px -2px 0 rgb(0, 0, 0), 2px -2px 0 rgb(0, 0, 0), -2px 2px 0 rgb(0, 0, 0), 2px 2px 0 rgb(0, 0, 0); */
   font-family: "Waterfall", cursive;
+  /* font-family: var(--main-font); */
   padding: 2rem;
   position: relative;
   z-index: 1;
@@ -112,6 +113,10 @@
   height: 1000px;
 }
 
+.mokne-bottle-image{
+  height: 400px;
+}
+
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -125,6 +130,12 @@
 }
 
 @media (max-width: 1540px) {
+  .background-video {
+    height: 100vh;
+  }
+  .on-top-div{
+    height: 100vh;
+  }
   .image-container {
     gap: 4rem;
     font-size: 80px;
