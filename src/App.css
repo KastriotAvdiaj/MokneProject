@@ -1,7 +1,7 @@
 .header-wrap{
     width: 100%;
     position: fixed;
-    height: 86px;
+    height: 91px;
     z-index: 7;
     background-color: rgba(0, 0, 0, 0.39);
     backdrop-filter: blur(6px);

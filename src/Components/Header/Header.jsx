@@ -1,6 +1,5 @@
 import React from "react";
 import "./Header.css";
-import waterLogo from "../../assets/waterBottle22.png";
 import { NavLink } from "react-router-dom";
 import waterLogo3 from "../../assets/iconLogo.png";
 

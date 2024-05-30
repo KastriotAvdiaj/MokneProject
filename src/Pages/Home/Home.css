@@ -19,21 +19,37 @@
 }
   
 .mokne-paragraph {
-  position: absolute;
-  margin-top: 8rem;
-  height: auto;
-  width: 100%;
+  font-size: 210px;
+  -webkit-text-stroke: 3px rgb(243, 243, 243);
+  margin: 0;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: bolder;
-  color: rgba(209, 103, 42, 0.329);
-  -webkit-text-stroke: 3px rgb(243, 243, 243);
-  font-size: 240px;
+  position: absolute;
+  left: 0;
+  right: 0;
   z-index: 6;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  animation: fadeIn 2s ease-in-out;
+  text-align: center;
+  
 }
+
+.mokne-paragraph0 {
+  color: rgb(255, 255, 255);
+  top: 0;
+  z-index: 9;
+}
+
+.mokne-paragraph1 {
+  color: rgba(255, 255, 255, 0);
+  z-index: 8;
+  top: 70px; 
+}
+
+.mokne-paragraph2 {
+  z-index: 7;
+  color: rgb(253, 128, 12);
+  top: 140px; 
+}
+
 
 .mokne-image{
   height: 400px;
@@ -43,7 +59,7 @@
 .image-container {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 4rem;
   font-size: 70px;
   font-weight: bolder;
   text-shadow: -2px -2px 0 rgb(0, 0, 0), 2px -2px 0 rgb(0, 0, 0), -2px 2px 0 rgb(0, 0, 0), 2px 2px 0 rgb(0, 0, 0);
@@ -59,17 +75,14 @@
   flex-direction: column;
 }
 
-.parahraph-div2{
-  display: flex;
-  gap: 1.3rem;
-}
-
 .parahraph-div p{
   margin: 0;
   padding: 0;
 }
 
 .pattern-background {
+  display: flex;
+  height: 110vh;
   background-color: #1f1f75;
   opacity: 0.8;
   background-image: 
@@ -85,7 +98,8 @@
   left: 0;
   right: 0;
   height: 10px;
-  background: rgb(38, 0, 255);
+  background: rgb(0, 89, 255);
+ /* box-shadow: 4px 5px 16px black; */
   transform-origin: 0%;
 }
 
