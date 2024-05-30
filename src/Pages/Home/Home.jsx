@@ -1,7 +1,9 @@
 import React from "react";
+import { useEffect, useState } from "react";
 import { useScroll, useSpring, motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Mokne3 from "../../assets/final7-vmake.mp4";
+import image from "../../assets/mountains.jpg";
 import "./Home.css";
 import mokneImage from "../../assets/bootleMokne.jpg";
 
@@ -26,9 +28,23 @@ const Home = () => {
     threshold: 0.5,
   });
 
-  React.useEffect(() => {
+  const [visibleParagraphs, setVisibleParagraphs] = useState([
+    false,
+    false,
+    false,
+  ]);
+
+  useEffect(() => {
     if (inView) {
       controls.start("visible");
+
+      const timeouts = [
+        setTimeout(() => setVisibleParagraphs([true, false, false]), 0),
+        setTimeout(() => setVisibleParagraphs([true, true, false]), 700),
+        setTimeout(() => setVisibleParagraphs([true, true, true]), 1400),
+      ];
+
+      return () => timeouts.forEach(clearTimeout);
     } else {
       controls.start("hidden");
     }
@@ -61,11 +77,7 @@ const Home = () => {
           <source src={Mokne3} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-        <div className="on-top-div">
-          <div className="mokne-paragraph">
-            {/* <p className="mokne-paragraph2">MOKNE</p> */}
-          </div>
-        </div>
+        <div className="on-top-div"></div>
         <div className="pattern-background">
           <motion.div
             ref={ref}
@@ -75,24 +87,19 @@ const Home = () => {
             className="image-container"
           >
             <img src={mokneImage} alt="Mokne Bottle" className="mokne-image" />
-            <div className="parahraph-div">
-              <div className="parahraph-div2">
+            <div className="paragraph-div">
+              <div className="paragraph-div2">
                 <motion.p
+                  style={{ margin: 0, padding: 0 }}
                   initial="initial"
                   animate="animate"
                   variants={waveAnimation}
                 >
-                  Shijojeni
-                </motion.p>
-                <motion.p
-                  initial="initial"
-                  animate="animate"
-                  variants={waveAnimation}
-                >
-                  ujin
+                  Shijojeni ujin
                 </motion.p>
               </div>
               <motion.p
+                style={{ margin: 0, padding: 0 }}
                 initial="initial"
                 animate="animate"
                 variants={waveAnimation}
@@ -104,6 +111,20 @@ const Home = () => {
                 animate="animate"
                 variants={waveAnimation}
               ></motion.p>
+            </div>
+            <div style={{ position: "relative", height: "400px" }}>
+              {["MOKNE", "MOKNE", "MOKNE"].map((text, index) => (
+                <motion.div
+                  key={index}
+                  initial="hidden"
+                  animate={visibleParagraphs[index] ? "visible" : "hidden"}
+                  variants={revealAnimation}
+                >
+                  <p className={`mokne-paragraph mokne-paragraph${index}`}>
+                    {text}
+                  </p>
+                </motion.div>
+              ))}
             </div>
           </motion.div>
         </div>
