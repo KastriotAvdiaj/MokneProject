@@ -6,6 +6,7 @@ import mokneImage from "../../assets/bootleMokne.jpg";
 import bottle from "../../assets/bottleMokne.png";
 import Burimi from "../../assets/burimiIstogut.jpg";
 import "./Home.css";
+import { MultilayerParallax } from "../../Components/Parallax/MultilayerParallax";
 
 const waveAnimation = {
   initial: { y: 0, x: 0 },
@@ -28,7 +29,11 @@ const Home = () => {
     threshold: 0.5,
   });
 
-  const [visibleParagraphs, setVisibleParagraphs] = useState([false, false, false]);
+  const [visibleParagraphs, setVisibleParagraphs] = useState([
+    false,
+    false,
+    false,
+  ]);
 
   const patternBackgroundRef = useRef(null);
 
@@ -67,18 +72,6 @@ const Home = () => {
     restDelta: 0.001,
   });
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-      const parallaxSpeed = 0.5;
-      if (patternBackgroundRef.current) {
-        patternBackgroundRef.current.style.backgroundPositionY = `${-scrollPosition * parallaxSpeed}px`;
-      }
-    };
-  
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   return (
     <>
@@ -89,7 +82,7 @@ const Home = () => {
           Your browser does not support the video tag.
         </video>
         <div className="on-top-div"></div>
-        <div className="pattern-background" ref={patternBackgroundRef}>
+        {/* <div className="pattern-background" ref={patternBackgroundRef}>
           <motion.div
             ref={ref}
             initial="hidden"
@@ -138,7 +131,8 @@ const Home = () => {
               ))}
             </div>
           </motion.div>
-        </div>
+        </div> */}
+        <MultilayerParallax />
         <div className="third-content">
           {/* <img src={bottle} className="mokne-bottle-image" /> */}
         </div>

@@ -1,0 +1,45 @@
+.multilayer-parallax-wrapper {
+    /* width: 100%; */
+    height: 300vh;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+  }
+  
+  .multilayer-parallax-h1 {
+    position: relative;
+    font-size: 170px;
+    font-weight: bold;
+    z-index: 10;
+    color: white;
+  }
+  
+  .multilayer-parallax-div1 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    background-attachment: fixed;
+    background-image: url('../../assets/mountains2.jpg');
+    background-position: bottom;
+    background-size: cover;
+  }
+  
+  .multilayer-parallax-div2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 20;
+    background-attachment: fixed;
+    background-image: url('../../assets/group1.png');
+    background-position: bottom;
+    background-size: cover;
+  }
+  
+  
