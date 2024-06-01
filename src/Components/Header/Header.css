@@ -6,7 +6,7 @@
     align-items: center;
     padding: 5px 25% 5px 25%;
     gap: 5rem;
-    z-index: 11;
+    z-index: 1001;
 }
 
 .header-ul {
@@ -23,6 +23,7 @@
     padding: 0.4rem 0.5rem;
     cursor: pointer;
     transition: all 0.15s ease-in;
+    z-index: 1001;
 }
 
 .header-ul a {

@@ -3,6 +3,7 @@ import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import "./MultilayerParallax.css";
 import mokneImage from "../../assets/bootleMokne.jpg";
+import { Reveal } from "../../Components/Reveal/Reveal";
 
 export const MultilayerParallax = () => {
   const waveAnimation = {
@@ -68,7 +69,9 @@ export const MultilayerParallax = () => {
           variants={revealAnimation}
           className="image-container"
         >
-          <img src={mokneImage} alt="Mokne Bottle" className="mokne-image" />
+          <Reveal>
+            <img src={mokneImage} alt="Mokne Bottle" className="mokne-image" />
+          </Reveal>
           <div className="paragraph-div">
             <div className="paragraph-div2">
               <motion.p

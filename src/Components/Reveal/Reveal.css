@@ -1,0 +1,5 @@
+.reveal-wrapper{
+    position: relative;
+    overflow: hidden;
+    width: fit-content;
+}
