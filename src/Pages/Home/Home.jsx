@@ -2,9 +2,8 @@ import React from "react";
 import { useScroll, useSpring, motion } from "framer-motion";
 import Mokne3 from "../../assets/final7-vmake.mp4";
 import "./Home.css";
-import burimiVideo from "../../assets/burimi2.mp4";
-import mokneLogo from "../../assets/fullLogo.jpg";
-import burimiPhoto from "../../assets/burimiPhoto.jpg";
+import mokneLogo from "../../assets/mokneLogoWider.jpg";
+import { FadeIn } from "../../Components/Reveal/FadeIn";
 import { Reveal } from "../../Components/Reveal/Reveal";
 import { MultilayerParallax } from "../../Components/Parallax/MultilayerParallax";
 
@@ -40,21 +39,13 @@ const Home = () => {
         </video>
         <div className="on-top-div"></div>
         <div className="mid-section-wrapper">
-          <div className="h1-wrapper">
-            <img src={burimiPhoto} alt="" className="background-blur-image" />
-            <Reveal>
-              <h1 className="home-h1">Ujë nga Bjeshkët e Istogut</h1>
-            </Reveal>
-          </div>
-          <div className="mokneLogo-wrapper">
+          <img src={mokneLogo} alt="" className="mokne-logo" />
+          <FadeIn>
             <h1 className="mokneLogo-h1">
-              <section style={{ margin: "0 0 0 1.2rem", padding: "0 0 0 0" }}>
-                Inspiruar nga
-              </section>
-              Bjeshkët Mokne
+              Etiketa jonë e shishës është e inspiruar nga mrekullia e bjeshkëve
+              Mokne
             </h1>
-            <img src={mokneLogo} alt="" className="mokne-logo" />
-          </div>
+          </FadeIn>
         </div>
         <MultilayerParallax />
         <div className="third-content">
