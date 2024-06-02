@@ -2,7 +2,6 @@
 .video-container {
   position: relative;
   overflow: hidden;
- 
 }
 
 .background-video {
@@ -31,27 +30,6 @@
   
 }
 
-.mokne-paragraph0 {
-  color: rgb(255, 255, 255);
-  top: 0;
-  z-index: 9;
-}
-
-.mokne-paragraph1 {
-  color: #ffffff;
-  opacity: 0.6;
-  z-index: 8;
-  top: 90px; 
-}
-
-.mokne-paragraph2 {
-  opacity: 0.4;
-  z-index: 7;
-  color: #ffffff6a;
-  top: 180px; 
-}
-
-
 .mokne-image{
   height: 400px;
  box-shadow: 4px 5px 8px black;
@@ -64,13 +42,76 @@
   gap: 4rem;
   font-size: 70px;
   font-weight: bolder;
-  /* text-shadow: -2px -2px 0 rgb(0, 0, 0), 2px -2px 0 rgb(0, 0, 0), -2px 2px 0 rgb(0, 0, 0), 2px 2px 0 rgb(0, 0, 0); */
   font-family: "Waterfall", cursive;
-  /* font-family: var(--main-font); */
   padding: 2rem;
   position: relative;
   z-index: 1;
   color: rgb(255, 255, 255);
+}
+
+.mid-section-wrapper{
+  margin: 2rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10rem;
+}
+
+.mokneLogo-wrapper{
+  position: relative;
+  height: 400px;
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mokneLogo-h1{
+  font-size: 45px;
+  color: #ffffff;
+}
+
+.mokne-logo{
+  box-shadow:-6px 5px 15px rgb(31, 31, 31);
+  border-radius: 1rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.h1-wrapper{
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 400px;
+  padding: 0rem 2rem;
+  border-radius: 1rem;
+  width: fit-content;
+  background-color: rgb(61, 68, 61);
+  box-shadow:-6px 5px 15px rgb(31, 31, 31);
+}
+
+.background-blur-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(3px);
+  z-index: -1;
+}
+
+.home-h1{
+  text-shadow: 2px 7px 6px rgb(25, 0, 255);
+  color: #ffffff;
+  font-size: 100px;
+  font-family:var(--font-number-7);
 }
 
 .paragraph-div2{

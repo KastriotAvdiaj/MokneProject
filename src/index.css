@@ -11,18 +11,23 @@ html, body {
 } 
 
 :root{
-  --main-bg-color : #012363;
-  --secondary-bg-color : #E8F5F9;
+  --main-bg-color : #133677;
+  --secondary-bg-color : #bfd2f5;
   --main-font : "Roboto", sans-serif;
   --font-number-2 : "Platypi", serif;
   --font-number-3 : 'Poetsen One';
   --font-number-4 : "Jacquard 12", system-ui;
   --font-number-5 :"Concert One", sans-serif;
   --font-number-6 :"Lobster", sans-serif;
+  --font-number-7 : "Anton", sans-serif;
   --logo-font: "Poetsen One", sans-serif;
 }
 
 body{
+  background-size: 20px 20px;
+            background-image: 
+                linear-gradient(to right, #ffffff54 1px, transparent 1px),
+                linear-gradient(to bottom, #ffffff3d 1px, transparent 1px);
   background-color: var(--secondary-bg-color);
   padding: 0;
   margin: 0;

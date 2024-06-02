@@ -1,11 +1,11 @@
-import React, { useEffect, useRef, useState } from "react";
-import { useScroll, useSpring, motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import React from "react";
+import { useScroll, useSpring, motion } from "framer-motion";
 import Mokne3 from "../../assets/final7-vmake.mp4";
-import mokneImage from "../../assets/bootleMokne.jpg";
-import bottle from "../../assets/bottleMokne.png";
-import Burimi from "../../assets/burimiIstogut.jpg";
 import "./Home.css";
+import burimiVideo from "../../assets/burimi2.mp4";
+import mokneLogo from "../../assets/fullLogo.jpg";
+import burimiPhoto from "../../assets/burimiPhoto.jpg";
+import { Reveal } from "../../Components/Reveal/Reveal";
 import { MultilayerParallax } from "../../Components/Parallax/MultilayerParallax";
 
 const waveAnimation = {
@@ -39,7 +39,24 @@ const Home = () => {
           Your browser does not support the video tag.
         </video>
         <div className="on-top-div"></div>
-          <MultilayerParallax />
+        <div className="mid-section-wrapper">
+          <div className="h1-wrapper">
+            <img src={burimiPhoto} alt="" className="background-blur-image" />
+            <Reveal>
+              <h1 className="home-h1">Ujë nga Bjeshkët e Istogut</h1>
+            </Reveal>
+          </div>
+          <div className="mokneLogo-wrapper">
+            <h1 className="mokneLogo-h1">
+              <section style={{ margin: "0 0 0 1.2rem", padding: "0 0 0 0" }}>
+                Inspiruar nga
+              </section>
+              Bjeshkët Mokne
+            </h1>
+            <img src={mokneLogo} alt="" className="mokne-logo" />
+          </div>
+        </div>
+        <MultilayerParallax />
         <div className="third-content">
           {/* <img src={bottle} className="mokne-bottle-image" /> */}
         </div>

@@ -42,4 +42,25 @@
     background-size: cover;
   }
   
+
+  
+.mokne-paragraph0 {
+  color: rgb(255, 255, 255);
+  top: 0;
+  z-index: 9;
+}
+
+.mokne-paragraph1 {
+  color: #ffffff;
+  opacity: 0.6;
+  z-index: 8;
+  top: 90px; 
+}
+
+.mokne-paragraph2 {
+  opacity: 0.4;
+  z-index: 7;
+  color: #ffffff6a;
+  top: 180px; 
+}
   
