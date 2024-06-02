@@ -39,8 +39,10 @@ const Home = () => {
         </video>
         <div className="on-top-div"></div>
         <div className="mid-section-wrapper">
-          <img src={mokneLogo} alt="" className="mokne-logo" />
-          <FadeIn>
+          <FadeIn x={-300}>
+            <img src={mokneLogo} alt="" className="mokne-logo" />
+          </FadeIn>
+          <FadeIn x={300}>
             <h1 className="mokneLogo-h1">
               Etiketa jonë e shishës është e inspiruar nga mrekullia e bjeshkëve
               Mokne
