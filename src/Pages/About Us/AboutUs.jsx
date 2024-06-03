@@ -1,6 +1,7 @@
 import React from "react";
 import './AboutUs.css';
 import Montains from "../../assets/natyre water.jpg";
+import Bottle from "../../assets/bootleMokne.jpg";
 
 export const AboutUs = () => {
   return (
@@ -12,14 +13,9 @@ export const AboutUs = () => {
         <h1>Rreth MOKNE</h1>
         <p>Kompania Mokne shpk është kompani e re prodhuese e cila aktivitet primar e ka ujin natyral të amballazhuar.</p>
         <p>Ne besojmë në njohjen dhe shpërblimin e punonjësve të jashtëzakonshëm, dhe ofrojmë mundësi për rritje dhe avancim brenda kompanisë sonë.</p>
-        <h2>Punë në dispozicion</h2>
-        <p>Punë të postuara nga MOKNE</p>
-        <p>Nuk ka punë të disponueshme.</p>
       </div>
-      
-      <div className="contact-box">
-        <p>Email: info@mokne.com</p>
-        <p>Phone: +383 48 505 858</p>
+      <div className="bottle-container">
+        <img src={Bottle} alt="Bottle" className="bottle-image" />
       </div>
     </div>
   );
