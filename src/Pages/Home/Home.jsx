@@ -35,7 +35,7 @@ const Home = () => {
               <img src={mokneLogo} alt="" className="mokne-logo" />
             </FadeIn>
             <FadeIn x={300}>
-              <h1 className="mokneLogo-h1"  >
+              <h1 className="mokneLogo-h1">
                 Etiketa jonë e shishës është e inspiruar nga mrekullia e
                 bjeshkëve Mokne
               </h1>
@@ -44,7 +44,12 @@ const Home = () => {
           <Divider />
           <div className="second-content">
             <img src={mokneBottle} className="mokne-bottle-image" />
-            <div className="first-bottle-div">250 ML</div>
+            <div className="first-bottle-div">
+              <p>250 ML</p>
+              <Divider color={"#2958F9"} />
+              <p className="first-bottle-price">0.25€ me copë</p>
+              <p className="first-bottle-price">4.50€ me kuti</p>
+            </div>
           </div>
         </div>
         <MultilayerParallax />

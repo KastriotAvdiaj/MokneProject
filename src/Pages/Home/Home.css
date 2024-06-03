@@ -92,6 +92,19 @@
   border-radius: 0.5rem;
   background-color: rgba(40, 100, 124, 0.507);
   position: absolute;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.first-bottle-price{
+  font-size: 1.4rem;
+}
+
+.first-bottle-div p{
+  color: white;
+  padding: 0;
+  margin: 0;
 }
 
 .mokneLogo-h1{
