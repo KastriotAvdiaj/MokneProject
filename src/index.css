@@ -1,7 +1,6 @@
 html, body {
   margin: 0;
   padding: 0;
-  /* overflow-x: hidden;  */
   height: 100%;
   box-sizing: border-box;
 }
@@ -33,9 +32,5 @@ body{
   margin: 0;
   box-sizing: border-box;
   font-family: var(--main-font);
-  /* font-family: var(--font-number-5); */
-  /* font-family: var(--fun-font); */
-  /* font-family: var(--main-font2); */
-  /* font-family: var(--secondary-font); */
 
 }

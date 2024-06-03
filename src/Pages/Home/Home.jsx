@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useScroll, useSpring, motion } from "framer-motion";
 import Mokne3 from "../../assets/final7-vmake.mp4";
 import "./Home.css";
@@ -16,19 +16,25 @@ const Home = () => {
     restDelta: 0.001,
   });
 
+  const [onTopDivClassname, setOnTopDivClassname] = useState("on-top-div");
+
   useEffect(() => {
-    console.log(scrollYProgress);
-  }, [scrollYProgress]);
+    const timer = setTimeout(() => {
+      setOnTopDivClassname("on-top-div-over");
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <>
       <motion.div className="progress-bar" style={{ scaleX }} />
       <div className="video-container">
-        <video autoPlay muted loop className="background-video">
+        <motion.video autoPlay muted loop className="background-video">
           <source src={Mokne3} type="video/mp4" />
           Your browser does not support the video tag.
-        </video>
-        <div className="on-top-div"></div>
+        </motion.video>
+        <div className={onTopDivClassname}></div>
         <div className="mid-section-wrapper">
           <div className="first-content">
             <FadeIn x={-300}>
