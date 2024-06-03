@@ -1,7 +1,7 @@
 import React from "react";
 import './AboutUs.css';
 import Montains from "../../assets/natyre water.jpg";
-import Bottle from "../../assets/bootleMokne.jpg";
+import Bottle from "../../assets/bottle.jpg";
 
 export const AboutUs = () => {
   return (
