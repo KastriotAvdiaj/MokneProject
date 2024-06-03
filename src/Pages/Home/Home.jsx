@@ -1,25 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useScroll, useSpring, motion } from "framer-motion";
 import Mokne3 from "../../assets/final7-vmake.mp4";
 import "./Home.css";
 import mokneLogo from "../../assets/mokneLogoWider.jpg";
+import mokneBottle from "../../assets/mokneBottles.png";
 import { FadeIn } from "../../Components/Reveal/FadeIn";
-import { Reveal } from "../../Components/Reveal/Reveal";
+import Divider from "../../Components/Divider/Divider";
 import { MultilayerParallax } from "../../Components/Parallax/MultilayerParallax";
-
-const waveAnimation = {
-  initial: { y: 0, x: 0 },
-  animate: {
-    x: [0, -10, 10, 0],
-    y: [0, -10, 10, 0],
-    transition: {
-      duration: 4,
-      ease: "easeInOut",
-      repeat: Infinity,
-      repeatType: "loop",
-    },
-  },
-};
 
 const Home = () => {
   const { scrollYProgress } = useScroll();
@@ -28,6 +15,10 @@ const Home = () => {
     damping: 30,
     restDelta: 0.001,
   });
+
+  useEffect(() => {
+    console.log(scrollYProgress);
+  }, [scrollYProgress]);
 
   return (
     <>
@@ -39,20 +30,25 @@ const Home = () => {
         </video>
         <div className="on-top-div"></div>
         <div className="mid-section-wrapper">
-          <FadeIn x={-300}>
-            <img src={mokneLogo} alt="" className="mokne-logo" />
-          </FadeIn>
-          <FadeIn x={300}>
-            <h1 className="mokneLogo-h1">
-              Etiketa jonë e shishës është e inspiruar nga mrekullia e bjeshkëve
-              Mokne
-            </h1>
-          </FadeIn>
+          <div className="first-content">
+            <FadeIn x={-300}>
+              <img src={mokneLogo} alt="" className="mokne-logo" />
+            </FadeIn>
+            <FadeIn x={300}>
+              <h1 className="mokneLogo-h1"  >
+                Etiketa jonë e shishës është e inspiruar nga mrekullia e
+                bjeshkëve Mokne
+              </h1>
+            </FadeIn>
+          </div>
+          <Divider />
+          <div className="second-content">
+            <img src={mokneBottle} className="mokne-bottle-image" />
+            <div className="first-bottle-div">250 ML</div>
+          </div>
         </div>
         <MultilayerParallax />
-        <div className="third-content">
-          {/* <img src={bottle} className="mokne-bottle-image" /> */}
-        </div>
+        <div className="third-content"></div>
       </div>
     </>
   );
