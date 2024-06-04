@@ -4,4 +4,15 @@
     margin: 20px 0;
     border: none;
     width: 100%;
+    display: flex; 
+    justify-content: center;
+}
+
+.logo-container {
+    width: fit-content; 
+}
+
+.divider-with-logo{
+    display: flex;
+    align-items: center;
 }

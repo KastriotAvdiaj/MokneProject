@@ -11,6 +11,7 @@ import foto1 from "../../assets/instagramImage4.jpg";
 import foto2 from "../../assets/instagramImage1.jpg";
 import foto3 from "../../assets/instagramImage2.jpg";
 import foto4 from "../../assets/instagramImage3.jpg";
+import DividerWithLogo from "../../Components/Divider/DividerWithLogo";
 import { MultilayerParallax } from "../../Components/Parallax/MultilayerParallax";
 import { Reveal } from "../../Components/Reveal/Reveal";
 
@@ -81,7 +82,7 @@ const Home = () => {
               </FadeIn>
             </section>
           </div>
-          <Divider />
+          <DividerWithLogo />
           <div className="second-content">
             <img src={mokneBottle} className="mokne-bottle-image" />
             <div className="first-bottle-div">
