@@ -8,14 +8,16 @@ export const Price = ({
   bottlePrice,
   packetPrice,
   left,
+  x,
+  y,
   right,
   top,
   bottom,
 }) => {
   return (
     <FadeIn
-      x={0}
-      y={-100}
+      x={x}
+      y={y}
       left={left}
       right={right}
       top={top}
