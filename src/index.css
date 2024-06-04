@@ -13,12 +13,9 @@ html, body {
   --main-bg-color : #133677;
   --secondary-bg-color : #bfd2f5;
   --main-font : "Roboto", sans-serif;
-  --font-number-2 : "Platypi", serif;
-  --font-number-3 : 'Poetsen One';
   --font-number-4 :  "Playfair Display", serif;
   --font-number-6 :"Lobster", sans-serif;
   --font-number-7 : "Antonio", sans-serif;
-  --font-number-8 : "Unbounded", sans-serif;
   --logo-font: "Poetsen One", sans-serif;
 }
 
