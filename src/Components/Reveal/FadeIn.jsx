@@ -1,19 +1,20 @@
 import React, { useEffect, useRef } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
 
-export const FadeIn = ({ children, x }) => {
+export const FadeIn = ({ children, x, y }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false });
   const controls = useAnimation();
 
   const revealAnimation = {
-    hidden: { opacity: 0, x: x },
+    hidden: { opacity: 0, x: x, y: y ? y : 100 },
     visible: {
       opacity: 1,
       x: 0,
+      y: 0,
       transition: {
         duration: 0.7,
-        ease: "easeIn",
+        ease: "easeInOut",
       },
     },
   };

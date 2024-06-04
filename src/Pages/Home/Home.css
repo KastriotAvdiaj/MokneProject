@@ -20,7 +20,6 @@
 }
 
 .on-top-div-over{
-  background-color: rgba(31, 31, 31, 0.336);
   height: 1000px;
   animation: comeDown 2s ease-in;
 }
@@ -86,6 +85,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 5rem;
 }
 
 .second-content{
@@ -124,11 +124,20 @@
   margin: 0;
 }
 
-.mokneLogo-h1{
-  text-align: center;
-  font-family: var(--font-number-4);
+.mokneLogo-h1{  
   font-size: 55px;
   color: #ffffff;
+}
+.mokneLogo-h1-1{
+  color: #41e264;
+  margin: 0;
+  font-size: 85px;
+
+}
+
+.mokneLogo-h1-1,
+.mokneLogo-h1{
+  font-family: var(--font-number-7);
   text-shadow:-6px 5px 5px rgba(0, 0, 0, 0.233);
 }
 

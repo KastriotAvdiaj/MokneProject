@@ -6,7 +6,13 @@ import mokneLogo from "../../assets/mokneLogoWider.jpg";
 import mokneBottle from "../../assets/mokneBottles.png";
 import { FadeIn } from "../../Components/Reveal/FadeIn";
 import Divider from "../../Components/Divider/Divider";
+import { ImageContainer } from "../../Components/ImageContainer/ImageContainer";
+import foto1 from "../../assets/instagramImage4.jpg";
+import foto2 from "../../assets/instagramImage1.jpg";
+import foto3 from "../../assets/instagramImage2.jpg";
+import foto4 from "../../assets/instagramImage3.jpg";
 import { MultilayerParallax } from "../../Components/Parallax/MultilayerParallax";
+import { Reveal } from "../../Components/Reveal/Reveal";
 
 const Home = () => {
   const { scrollYProgress } = useScroll();
@@ -15,6 +21,14 @@ const Home = () => {
     damping: 30,
     restDelta: 0.001,
   });
+
+  const fotoStyle = {
+    width: "auto",
+    height: "400px",
+    objectFit: "cover",
+  };
+
+  const fotot = [foto1, foto2, foto3, foto4];
 
   const [onTopDivClassname, setOnTopDivClassname] = useState("on-top-div");
 
@@ -30,22 +44,42 @@ const Home = () => {
     <>
       <motion.div className="progress-bar" style={{ scaleX }} />
       <div className="video-container">
-        <motion.video autoPlay muted loop className="background-video">
+        {/* <motion.video autoPlay muted loop className="background-video">
           <source src={Mokne3} type="video/mp4" />
           Your browser does not support the video tag.
-        </motion.video>
-        <div className={onTopDivClassname}></div>
+        </motion.video> */}
+        <div className={onTopDivClassname}>
+          <ImageContainer>
+            {fotot.map((foto, index) => (
+              <img
+                key={index}
+                src={foto}
+                style={fotoStyle}
+                alt={`Foto ${index}`}
+              />
+            ))}
+          </ImageContainer>
+        </div>
         <div className="mid-section-wrapper">
           <div className="first-content">
             <FadeIn x={-300}>
               <img src={mokneLogo} alt="" className="mokne-logo" />
             </FadeIn>
-            <FadeIn x={300}>
-              <h1 className="mokneLogo-h1">
-                Etiketa jonë e shishës është e inspiruar nga mrekullia e
-                bjeshkëve Mokne
-              </h1>
-            </FadeIn>
+            <section>
+              <Reveal>
+                <h1 className="mokneLogo-h1-1">
+                  "Shije e pastër,
+                  <br /> jetë e shëndetshme."
+                </h1>
+              </Reveal>
+
+              <FadeIn x={300}>
+                <h1 className="mokneLogo-h1">
+                  Etiketa jonë e shishës është e inspiruar nga mrekullia e
+                  bjeshkëve Mokne.
+                </h1>
+              </FadeIn>
+            </section>
           </div>
           <Divider />
           <div className="second-content">

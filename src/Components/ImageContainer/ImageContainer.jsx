@@ -1,6 +1,6 @@
 import React from "react";
-import "./InfiniteCarousel.css";
+import "./ImageContainer.css";
 
-export const InfiniteCarousel = ({ children }) => {
+export const ImageContainer = ({ children }) => {
   return <div className="carousel-container">{children}</div>;
 };
