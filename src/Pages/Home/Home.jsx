@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useScroll, useSpring, motion } from "framer-motion";
-import Mokne3 from "../../assets/final7-vmake.mp4";
 import "./Home.css";
 import mokneLogo from "../../assets/mokneLogoWider.jpg";
 import mokneBottle from "../../assets/mokneBottles.png";
 import { FadeIn } from "../../Components/Reveal/FadeIn";
-import Divider from "../../Components/Divider/Divider";
+import { Price } from "../../Components/Pricing/Price";
 import { ImageContainer } from "../../Components/ImageContainer/ImageContainer";
 import foto1 from "../../assets/instagramImage4.jpg";
 import foto2 from "../../assets/instagramImage1.jpg";
@@ -73,7 +72,6 @@ const Home = () => {
                   <br /> jetë e shëndetshme."
                 </h1>
               </Reveal>
-
               <FadeIn x={300}>
                 <h1 className="mokneLogo-h1">
                   Etiketa jonë e shishës është e inspiruar nga mrekullia e
@@ -85,12 +83,12 @@ const Home = () => {
           <DividerWithLogo />
           <div className="second-content">
             <img src={mokneBottle} className="mokne-bottle-image" />
-            <div className="first-bottle-div">
-              <p>250 ML</p>
-              <Divider color={"#2958F9"} />
-              <p className="first-bottle-price">0.25€ me copë</p>
-              <p className="first-bottle-price">4.50€ me kuti</p>
-            </div>
+            <Price
+              left={"10%"}
+              bottleSize={"250 ML"}
+              bottlePrice={"0.25€"}
+              packetPrice={"4.50€"}
+            />
           </div>
         </div>
         <MultilayerParallax />

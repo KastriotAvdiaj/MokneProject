@@ -1,0 +1,23 @@
+.first-bottle-div{
+    padding: 1rem 2rem;
+    font-family: var(--font-number-4);
+    font-size: 2.4rem;
+    border: 1px solid white;
+    border-radius: 0.5rem;
+    background-color: rgba(40, 100, 124, 0.507);
+    position: absolute;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 0;
+  }
+  
+  .first-bottle-price{
+    font-size: 1.4rem;
+  }
+  
+  .first-bottle-div p{
+    color: white;
+    padding: 0;
+    margin: 0;
+  }

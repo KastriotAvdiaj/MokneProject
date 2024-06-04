@@ -73,11 +73,6 @@
   height: 220vh;
   width: 100%;
   gap: 3rem;
-  /* display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px; */
   display: grid;
 grid-template-columns: 1fr;
 grid-template-rows: 1fr 0.2fr 1fr;
@@ -103,30 +98,6 @@ grid-row-gap: 0px;
 
 .mokne-bottle-image{
   height: 600px;
-}
-
-.first-bottle-div{
-  padding: 1rem 2rem;
-  font-family: var(--font-number-4);
-  font-size: 2.4rem;
-  left: 20%;
-  border: 1px solid white;
-  border-radius: 0.5rem;
-  background-color: rgba(40, 100, 124, 0.507);
-  position: absolute;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-
-.first-bottle-price{
-  font-size: 1.4rem;
-}
-
-.first-bottle-div p{
-  color: white;
-  padding: 0;
-  margin: 0;
 }
 
 .mokneLogo-h1{  

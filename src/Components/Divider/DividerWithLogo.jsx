@@ -2,6 +2,7 @@ import React from "react";
 import "./Divider.css";
 import mokneLogo2 from "../../assets/mokneLogo2.png";
 import Divider from "./Divider";
+import { FadeIn } from "../Reveal/FadeIn";
 
 const DividerWithLogo = ({ color }) => {
   return (

@@ -1,7 +1,16 @@
 import React, { useEffect, useRef } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
 
-export const FadeIn = ({ children, x, y }) => {
+export const FadeIn = ({
+  children,
+  x,
+  y,
+  position,
+  left,
+  right,
+  top,
+  bottom,
+}) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false });
   const controls = useAnimation();
@@ -32,6 +41,14 @@ export const FadeIn = ({ children, x, y }) => {
         variants={revealAnimation}
         initial="hidden"
         animate={controls}
+        style={{
+          width: "100%",
+          position: position ? position : "relative",
+          left: left,
+          right: right,
+          top: top,
+          bottom: bottom,
+        }}
       >
         {children}
       </motion.div>
