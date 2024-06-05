@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
 import "./Reveal.css";
 
-export const Reveal = ({ children }) => {
+export const Reveal = ({ children, height }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
@@ -24,7 +24,10 @@ export const Reveal = ({ children }) => {
         }}
         initial="hidden"
         animate={mainControls}
-        transition={{ duration: 0.5, delay: 0.5  }}
+        transition={{ duration: 0.5, delay: 0.5 }}
+        style={{
+          height: height ? height : "100%",
+        }}
       >
         {children}
       </motion.div>

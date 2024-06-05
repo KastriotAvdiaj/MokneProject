@@ -11,7 +11,7 @@
   object-fit: cover;
 }
 .on-top-div {
-  position: relative; /* Ensure this container is the reference point for its child */
+  position: relative;
   height: 1000px;
   background-image: url("../../assets/oceanRock.avif");
   background-size: cover;
@@ -28,27 +28,47 @@
   right: 0; 
   bottom: 0; 
   background-image: url("../../assets/subtract2.png");
+  animation: slideInFromBottom 1s ease-in-out;
   z-index: 3; 
 }
+
+@keyframes slideInFromBottom {
+  0% {
+      transform: translateX(5%);
+  }
+  100% {
+      transform: translatex(0);
+  }
+}
+
 .mokne-single-bottle{
   position: absolute;
   left: 40%;
+  top: 0.5%;
   height: 700px;
   z-index: 2;
 }
 
-.mokne-paragraph {
-  font-size: 210px;
-  margin: 0;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: bolder;
-  position: absolute;
-  left: 0;
-  right: 0;
-  z-index: 6;
-  text-align: center;
-  
+.on-top-div-content{
+  height: 100%;
+  width: 100%;
+  display: grid;
+grid-template-columns: 2.5fr 1fr 1fr;
+grid-template-rows: 0.3fr repeat(2, 1fr);
+grid-column-gap: 0px;
+grid-row-gap: 0px;
 }
+
+.on-top-div-h2{
+  font-family: var(--font-number-4);
+  font-weight: bolder;
+ color: rgb(0, 32, 211);
+  font-size: 70px;
+  padding:0 0 0 3rem;
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
 
 .mokne-image{
   height: 400px;
@@ -136,16 +156,6 @@ grid-row-gap: 0px;
   margin-top: 4rem;
 }
 
-.parahraph-div{
-  display: flex;
-  flex-direction: column;
-}
-
-.parahraph-div p{
-  margin: 0;
-  padding: 0;
-}
-
 .pattern-background {
   display: flex;
   align-items: center;
@@ -167,9 +177,9 @@ grid-row-gap: 0px;
   transform-origin: 0%;
 }
 
-.third-content{
+/* .third-content{
   height: 1000px;
-}
+} */
 
 @media (max-width: 1540px) {
   .background-video {

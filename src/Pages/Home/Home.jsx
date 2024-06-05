@@ -28,11 +28,14 @@ const Home = () => {
     <>
       <motion.div className="progress-bar" style={{ scaleX }} />
       <div className="video-container">
-        {/* <motion.video autoPlay muted loop className="background-video">
-          <source src={Mokne3} type="video/mp4" />
-          Your browser does not support the video tag.
-        </motion.video> */}
-        <FadeIn x={-100} position={"absolute"} top={0} right={0} bottom={0}>
+        <FadeIn
+          x={-100}
+          position={"absolute"}
+          top={0}
+          right={0}
+          bottom={0}
+          once={true}
+        >
           <img
             src={mokneSingleBottle}
             className="mokne-single-bottle"
@@ -40,8 +43,26 @@ const Home = () => {
           />
         </FadeIn>
 
-        <div className={"on-top-div"}>{/* <ImageContainer /> */}</div>
-        <div className={"on-top-div2"}></div>
+        <div className={"on-top-div"}></div>
+        <div className={"on-top-div2"}>
+          <div className="on-top-div-content">
+            <h2 className="on-top-div-h2">
+              <Reveal>Bashkëpunim me natyrën,</Reveal>
+              {/* <br />{" "} */}
+              <Reveal>
+                <section
+                  style={{
+                    fontSize: "30px",
+                    color: "#80675E",
+                    fontStyle: "italic",
+                  }}
+                >
+                  për një shije kualitative!
+                </section>
+              </Reveal>
+            </h2>
+          </div>
+        </div>
         <div className="mid-section-wrapper">
           <div className="first-content">
             <FadeIn x={-300}>

@@ -6,14 +6,14 @@ export const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    message: ""
+    message: "",
   });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
       ...prevData,
-      [name]: value
+      [name]: value,
     }));
   };
 
@@ -24,6 +24,10 @@ export const Contact = () => {
 
   return (
     <div className="contact-container">
+      {/* <motion.video autoPlay muted loop className="background-video">
+          <source src={Mokne3} type="video/mp4" />
+          Your browser does not support the video tag.
+        </motion.video> */}
       <div className="contact-form-container">
         <form className="contact-form" onSubmit={handleSubmit}>
           <h2>Na Kontaktoni</h2>
