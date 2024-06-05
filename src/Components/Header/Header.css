@@ -32,7 +32,7 @@
 }
 
 .header-ul li:hover {
-    color: #9db9dd;
+    color: #a1c8fc;
 }
 
 .logo-and-name-section {
@@ -45,5 +45,6 @@
     gap: 0.5rem;
 }
 
-
-
+.active-link {
+    color: #a1c8fc; 
+}

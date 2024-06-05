@@ -6,12 +6,8 @@ import mokneBottle from "../../assets/mokneBottles.png";
 import { FadeIn } from "../../Components/Reveal/FadeIn";
 import { Price } from "../../Components/Pricing/Price";
 import { ImageContainer } from "../../Components/ImageContainer/ImageContainer";
-import foto1 from "../../assets/instagramImage4.jpg";
 import CustomPath1 from "../../Components/Svg/CustomPath1";
 import CustomPath2 from "../../Components/Svg/CustomPath2";
-import foto2 from "../../assets/instagramImage1.jpg";
-import foto3 from "../../assets/instagramImage2.jpg";
-import foto4 from "../../assets/instagramImage3.jpg";
 import DividerWithLogo from "../../Components/Divider/DividerWithLogo";
 import { MultilayerParallax } from "../../Components/Parallax/MultilayerParallax";
 import { Reveal } from "../../Components/Reveal/Reveal";
@@ -32,8 +28,6 @@ const Home = () => {
     objectFit: "cover",
   };
 
-  const fotot = [foto1, foto2, foto3, foto4];
-
   const [onTopDivClassname, setOnTopDivClassname] = useState("on-top-div");
 
   useEffect(() => {
@@ -52,17 +46,8 @@ const Home = () => {
           <source src={Mokne3} type="video/mp4" />
           Your browser does not support the video tag.
         </motion.video> */}
-        <div className={onTopDivClassname}>
-          <ImageContainer>
-            {fotot.map((foto, index) => (
-              <img
-                key={index}
-                src={foto}
-                style={fotoStyle}
-                alt={`Foto ${index}`}
-              />
-            ))}
-          </ImageContainer>
+        <div className={"on-top-div"}>
+          <ImageContainer />
         </div>
         <div className="mid-section-wrapper">
           <div className="first-content">
@@ -125,7 +110,6 @@ const Home = () => {
             <CustomPath2 />
             <CustomPath3 />
             <CustomPath4 />
-
           </div>
         </div>
         <MultilayerParallax />

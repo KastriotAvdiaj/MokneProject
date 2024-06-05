@@ -1,5 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
+import { FadeIn } from "../Reveal/FadeIn";
 
 const CustomPath1 = () => {
   const controls = useAnimation();

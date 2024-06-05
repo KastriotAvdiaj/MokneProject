@@ -1,9 +1,11 @@
 import React from "react";
 import "./Header.css";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import waterLogo3 from "../../assets/iconLogo.png";
 
 export const Header = () => {
+  const location = useLocation();
+
   return (
     <div className="main-header-container">
       <section className="logo-and-name-section">
@@ -11,14 +13,22 @@ export const Header = () => {
         Ujë Mokne
       </section>
       <ul className="header-ul">
-        <NavLink to="/">
-          <li>Home</li>
+        <NavLink exact to="/">
+          <li className={location.pathname === "/" ? "active-link" : ""}>
+            Home
+          </li>
         </NavLink>
         <NavLink to="/about-us">
-          <li>About Us</li>
+          <li
+            className={location.pathname === "/about-us" ? "active-link" : ""}
+          >
+            About Us
+          </li>
         </NavLink>
         <NavLink to="/contact">
-          <li>Contact</li>
+          <li className={location.pathname === "/contact" ? "active-link" : ""}>
+            Contact
+          </li>
         </NavLink>
       </ul>
     </div>

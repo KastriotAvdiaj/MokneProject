@@ -19,7 +19,7 @@
   overflow: hidden;
 }
 
-.on-top-div-over{
+/* .on-top-div-over{
   height: 1000px;
   animation: comeDown 2s ease-in;
 }
@@ -31,7 +31,7 @@
 100% {
     transform: translateY(0);
 }
-}
+} */
   
 .mokne-paragraph {
   font-size: 210px;
