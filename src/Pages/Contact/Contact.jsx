@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Contact.css";
-import PerJete from "../../assets/perjete.jpg";
+import PerJete from "../../assets/noBcgImage2.png";
+import Mountanin from "../../assets/whitemountain2.jpg"; // Ensure the import path is correct
 
 export const Contact = () => {
   const [formData, setFormData] = useState({
@@ -24,10 +25,6 @@ export const Contact = () => {
 
   return (
     <div className="contact-container">
-      {/* <motion.video autoPlay muted loop className="background-video">
-          <source src={Mokne3} type="video/mp4" />
-          Your browser does not support the video tag.
-        </motion.video> */}
       <div className="contact-form-container">
         <form className="contact-form" onSubmit={handleSubmit}>
           <h2>Na Kontaktoni</h2>
