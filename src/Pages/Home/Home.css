@@ -5,34 +5,38 @@
 }
 
 .background-video {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
   width: 100%;
-  height: 1000px;
+  height: 100vh;
   object-fit: cover;
-  z-index: -1;
 }
-.on-top-div{
+.on-top-div {
+  position: relative; /* Ensure this container is the reference point for its child */
   height: 1000px;
+  background-image: url("../../assets/oceanRock.avif");
+  background-size: cover;
   transition: height 2s ease;
+  z-index: 1;
   overflow: hidden;
 }
 
-/* .on-top-div-over{
+.on-top-div2 {
+  position: absolute;
   height: 1000px;
-  animation: comeDown 2s ease-in;
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0; 
+  background-image: url("../../assets/subtract2.png");
+  z-index: 3; 
+}
+.mokne-single-bottle{
+  position: absolute;
+  left: 40%;
+  height: 700px;
+  z-index: 2;
 }
 
-@keyframes comeDown {
-  0% {
-    transform: translateY(-100%);
-}
-100% {
-    transform: translateY(0);
-}
-} */
-  
 .mokne-paragraph {
   font-size: 210px;
   margin: 0;

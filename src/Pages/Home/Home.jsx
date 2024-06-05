@@ -13,6 +13,8 @@ import { MultilayerParallax } from "../../Components/Parallax/MultilayerParallax
 import { Reveal } from "../../Components/Reveal/Reveal";
 import CustomPath3 from "../../Components/Svg/CustomPath3";
 import CustomPath4 from "../../Components/Svg/CustomPath4";
+import subtractImage from "../../assets/subtract3.png";
+import mokneSingleBottle from "../../assets/noBcgImage2.png";
 
 const Home = () => {
   const { scrollYProgress } = useScroll();
@@ -22,22 +24,6 @@ const Home = () => {
     restDelta: 0.001,
   });
 
-  const fotoStyle = {
-    width: "auto",
-    height: "400px",
-    objectFit: "cover",
-  };
-
-  const [onTopDivClassname, setOnTopDivClassname] = useState("on-top-div");
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setOnTopDivClassname("on-top-div-over");
-    }, 2000);
-
-    return () => clearTimeout(timer);
-  }, []);
-
   return (
     <>
       <motion.div className="progress-bar" style={{ scaleX }} />
@@ -46,9 +32,16 @@ const Home = () => {
           <source src={Mokne3} type="video/mp4" />
           Your browser does not support the video tag.
         </motion.video> */}
-        <div className={"on-top-div"}>
-          <ImageContainer />
-        </div>
+        <FadeIn x={-100} position={"absolute"} top={0} right={0} bottom={0}>
+          <img
+            src={mokneSingleBottle}
+            className="mokne-single-bottle"
+            alt="bottle"
+          />
+        </FadeIn>
+
+        <div className={"on-top-div"}>{/* <ImageContainer /> */}</div>
+        <div className={"on-top-div2"}></div>
         <div className="mid-section-wrapper">
           <div className="first-content">
             <FadeIn x={-300}>

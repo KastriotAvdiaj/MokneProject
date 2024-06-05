@@ -3,6 +3,7 @@ import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import "./MultilayerParallax.css";
 import mokneImage from "../../assets/bootleMokne.jpg";
+import mokneWatterBottle from "../../assets/mokneWaterBottle1.png";
 import { Reveal } from "../../Components/Reveal/Reveal";
 
 export const MultilayerParallax = () => {
@@ -70,7 +71,7 @@ export const MultilayerParallax = () => {
           className="image-container"
         >
           <Reveal>
-            <img src={mokneImage} alt="Mokne Bottle" className="mokne-image" />
+            <img src={mokneWatterBottle} alt="Mokne Bottle" className="mokne-image" style={{marginLeft:"3rem"}} />
           </Reveal>
           <div className="paragraph-div">
             <div className="paragraph-div2">

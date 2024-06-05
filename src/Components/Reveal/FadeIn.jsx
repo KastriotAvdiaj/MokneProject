@@ -10,9 +10,10 @@ export const FadeIn = ({
   right,
   top,
   bottom,
+  once,
 }) => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: false });
+  const isInView = useInView(ref, { once: once ? once : false });
   const controls = useAnimation();
 
   const revealAnimation = {
@@ -48,6 +49,7 @@ export const FadeIn = ({
           right: right,
           top: top,
           bottom: bottom,
+          zIndex: 2,
         }}
       >
         {children}
