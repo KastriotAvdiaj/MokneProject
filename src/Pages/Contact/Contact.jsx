@@ -70,8 +70,8 @@ export const Contact = () => {
         <p>Fabrika: Uji Mokne, Istog, Kosova</p>
         <p>Zip Code: 30000</p>
         <p>Istog, Kosova</p>
-        <p>044 888 888</p>
-        <p>info@gmail.com</p>
+        <p>048 505 858</p>
+        <p>hrmokne@gmail.com</p>
         <p>Per kontakt distribucioni ose porosi:</p>
         <p>import-export@mokne.ks</p>
         <p>www.mokne.ks</p>

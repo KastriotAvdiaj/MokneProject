@@ -12,6 +12,7 @@
 
 .about-us-content {
   max-width: 600px;
+  transform: translateX(190px);
   
 }
 
@@ -34,11 +35,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
 }
 
 .bottle-image {
-  width: 350px;
-  height: auto;
+  width: 400px;
+  transform: translateX(-190px);
 }
+
 
