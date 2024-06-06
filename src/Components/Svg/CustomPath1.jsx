@@ -23,7 +23,7 @@ const CustomPath1 = () => {
   return (
     <svg width="100%" height="100%" style={{ position: "absolute" }} ref={ref}>
       <motion.path
-        d="M805 500 l-140 0 l0 -100 l-120 0 l0 -135"
+        d="M805 500 l-140 0 l0 -100 l-120 0 l0 -122"
         stroke="white"
         fill="transparent"
         strokeWidth="4"
@@ -31,7 +31,7 @@ const CustomPath1 = () => {
         animate={controls}
       />
       <circle cx="805" cy="500" r="6" fill="red" />
-      <circle cx="545" cy="265" r="6" fill="red" />
+      {/* <circle cx="545" cy="265" r="6" fill="red" /> */}
     </svg>
   );
 };

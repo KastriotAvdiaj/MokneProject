@@ -1,10 +1,10 @@
 .multilayer-parallax-wrapper {
     /* width: 100%; */
-    height: 130vh;
+    height: 110vh;
     overflow: hidden;
     position: relative;
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     /* justify-content: center; */
   }
   
@@ -60,5 +60,18 @@
   z-index: 7;
   color: #ffffff6a;
   top: 180px; 
+}
+
+.paragraph-above-mokne{
+  font-family: var(--font-number-4);
+  position: absolute;
+  font-size: 50px;
+  /* -webkit-text-stroke: 1px rgb(6, 13, 121); */
+  margin-left: 9rem;
+  margin-top: 15rem;
+  width: 100%;
+  top: 0%;
+  color: rgb(255, 255, 255);
+  /* right: 10%; */
 }
   

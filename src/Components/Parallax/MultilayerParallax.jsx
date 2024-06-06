@@ -63,7 +63,7 @@ export const MultilayerParallax = () => {
 
   return (
     <div className="multilayer-parallax-wrapper">
-      <div className="pattern-background" ref={ref}>
+      <div  ref={ref}>
         <motion.div
           initial="hidden"
           animate={controls}
@@ -71,7 +71,12 @@ export const MultilayerParallax = () => {
           className="image-container"
         >
           <Reveal>
-            <img src={mokneWatterBottle} alt="Mokne Bottle" className="mokne-image" style={{marginLeft:"3rem"}} />
+            <img
+              src={mokneWatterBottle}
+              alt="Mokne Bottle"
+              className="mokne-image"
+              style={{ marginLeft: "3rem" }}
+            />
           </Reveal>
           <div className="paragraph-div">
             <div className="paragraph-div2">
@@ -98,24 +103,28 @@ export const MultilayerParallax = () => {
               variants={waveAnimation}
             ></motion.p>
           </div>
-          <div style={{ position: "relative", height: "400px" }}>
-            {["MOKNE", "MOKNE", "MOKNE"].map((text, index) => (
-              <motion.div
-                key={index}
-                initial="hidden"
-                animate={visibleParagraphs[index] ? "visible" : "hidden"}
-                variants={revealAnimation}
-              >
-                <p className={`mokne-paragraph mokne-paragraph${index}`}>
-                  {text}
-                </p>
-              </motion.div>
-            ))}
+          <div>
+            <p className="paragraph-above-mokne">
+              Nuk është thjeshtë ujë, është ujë{" "}
+            </p>
+            <div style={{ position: "relative", height: "400px" }}>
+              {["MOKNE", "MOKNE", "MOKNE"].map((text, index) => (
+                <motion.div
+                  key={index}
+                  initial="hidden"
+                  animate={visibleParagraphs[index] ? "visible" : "hidden"}
+                  variants={revealAnimation}
+                >
+                  <p className={`mokne-paragraph mokne-paragraph${index}`}>
+                    {text}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </motion.div>
       </div>
       <div className="multilayer-parallax-div1" />
-      <div className="multilayer-parallax-div2" />
     </div>
   );
 };
