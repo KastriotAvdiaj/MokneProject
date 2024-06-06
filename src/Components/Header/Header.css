@@ -20,13 +20,15 @@
 }
 
 .header-ul li {
-    padding: 0.4rem 0.5rem;
+    padding: 0.5rem 0.7rem;
+    border-radius: 0.2rem;
     cursor: pointer;
     transition: all 0.15s ease-in;
     z-index: 1001;
 }
 
 .header-ul a {
+    border-radius: 0.2rem;
     color: white;
     text-decoration: none;
 }
@@ -46,5 +48,7 @@
 }
 
 .active-link {
+    padding: 0.5rem 0.9rem;
+    border-bottom: 2px solid rgb(0, 84, 240);
     color: #a1c8fc; 
 }
