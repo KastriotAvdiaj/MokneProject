@@ -15,19 +15,19 @@ export const Header = () => {
       <ul className="header-ul">
         <NavLink exact to="/">
           <li className={location.pathname === "/" ? "active-link" : ""}>
-            Home
+            Ballina
           </li>
         </NavLink>
         <NavLink to="/about-us">
           <li
             className={location.pathname === "/about-us" ? "active-link" : ""}
           >
-            About Us
+            Rreth Nesh
           </li>
         </NavLink>
         <NavLink to="/contact">
           <li className={location.pathname === "/contact" ? "active-link" : ""}>
-            Contact
+            Kontakto
           </li>
         </NavLink>
       </ul>

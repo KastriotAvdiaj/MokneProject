@@ -46,6 +46,7 @@
   animation-delay: calc(30s / 8 * (8 - 2) * -1);
 }
 
+
 .item3 {
   background-image: url('../../assets/img3.jpg');
   animation-delay: calc(30s / 8 * (8 - 3) * -1);
@@ -75,3 +76,116 @@
   background-image: url('../../assets/instagramImage4.jpg');
   animation-delay: calc(30s / 8 * (8 - 8) * -1);
 }
+.slider-caption{
+  z-index:  4;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  background-color: rgba(7, 28, 184, 0.581);
+  width: 100%;
+  top: 60%;
+  font-size: 1.9em;
+  font-family: var(--font-number-7);
+  padding: 0.5rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

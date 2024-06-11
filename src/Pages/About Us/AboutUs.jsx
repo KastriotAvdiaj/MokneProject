@@ -77,6 +77,7 @@ export const AboutUs = () => {
         </FadeIn>
         <div className="infiniteSlider-container">
           <InfiniteSlider />
+          
         </div>
       </div>
     </div>
