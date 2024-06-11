@@ -1,10 +1,9 @@
-
 .infiniteSlider-wrapper {
   width: 90%;
   max-width: 1536px;
   margin-inline: auto;
   position: relative;
-  height: 100px;
+  height: 200px;
   margin-top: 5rem;
   overflow: hidden;
   mask-image: linear-gradient(
@@ -24,9 +23,10 @@
 }
 
 .item {
-  width: 200px;
-  height: 100px;
-  background-color: red;
+  width: 200px; /* Adjusted to match container height */
+  height: 200px; /* Consistent size for all items */
+  background-size: cover; /* Ensures the image covers the entire div */
+  background-position: center; /* Centers the image */
   border-radius: 6px;
   position: absolute;
   left: max(calc(200px * 8), 100%);
@@ -37,33 +37,41 @@
 }
 
 .item1 {
+  background-image: url('../../assets/img1.jpg');
   animation-delay: calc(30s / 8 * (8 - 1) * -1);
 }
 
 .item2 {
+  background-image: url('../../assets/instagramImage3.jpg');
   animation-delay: calc(30s / 8 * (8 - 2) * -1);
 }
 
 .item3 {
+  background-image: url('../../assets/img3.jpg');
   animation-delay: calc(30s / 8 * (8 - 3) * -1);
 }
 
 .item4 {
+  background-image: url('../../assets/img4.jpg');
   animation-delay: calc(30s / 8 * (8 - 4) * -1);
 }
 
 .item5 {
+  background-image: url('../../assets/image5.jpg');
   animation-delay: calc(30s / 8 * (8 - 5) * -1);
 }
 
 .item6 {
+  background-image: url('../../assets/instagramImage2.jpg');
   animation-delay: calc(30s / 8 * (8 - 6) * -1);
 }
 
 .item7 {
+  background-image: url('../../assets/img2.jpg');
   animation-delay: calc(30s / 8 * (8 - 7) * -1);
 }
 
 .item8 {
+  background-image: url('../../assets/instagramImage4.jpg');
   animation-delay: calc(30s / 8 * (8 - 8) * -1);
 }

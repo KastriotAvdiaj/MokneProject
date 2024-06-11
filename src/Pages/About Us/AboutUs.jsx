@@ -18,7 +18,6 @@ export const AboutUs = () => {
 
   return (
     <div>
-      <PixiComponent/>
 
     
       <div className="about-us-first-container">
