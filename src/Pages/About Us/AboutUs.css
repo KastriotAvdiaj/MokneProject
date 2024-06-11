@@ -86,7 +86,7 @@
 
 .about-us-first-container{
   height: 100vh;
-  background-color: rgb(63, 137, 223);
+  background-color: rgb(63, 138, 223);
 }
 
 .about-us-first h1{
@@ -97,16 +97,40 @@
 }
 
 .about-us-video {
-  height: 500px;
+  height: 480px;
   border-radius: 2px; 
   
+}
+.under-h1-container{
+  padding: 0 4rem;
+  display: grid;
+grid-template-columns: repeat(3, 1fr);
+grid-template-rows: 1fr;
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+place-items: center;
+}
+
+.under-h1-container h3{
+  font-family: var(--font-number-7);
+  text-align: center;
+  font-size: 30px;
+  color: rgb(255, 255, 255);
 }
 
 .about-us-video-container{
   padding: 1rem;
   height: fit-content;
   border-radius: 5px; 
-  background-color: rgb(18, 4, 99);
   margin-bottom: 1rem;
-  box-shadow: -5px 7px 8px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.5);
+}
+
+.firstH1-wrapper, .secondH1-wrapper{
+  height: 360px;
+  padding: 0.5rem 1.5rem;
+  border-radius: 5px; 
+  background-color: rgb(209, 90, 11);
+  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.5);
+
 }
