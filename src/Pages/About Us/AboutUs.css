@@ -1,8 +1,9 @@
 .about-us {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 70px;
+  gap: 10rem;
   font-family: Arial, sans-serif;
   height: 100vh;
   background-size: cover;
@@ -10,10 +11,40 @@
   color: white;
 }
 
+
+
+.about-us-bottle, .about-us-bottle2{
+  height: 400px;
+  position: absolute;
+  top: 0;
+  z-index: 2;
+}
+.about-us-bottle2{
+  transform: rotate(-20deg);
+  right: 25%;
+}
+
+.about-us-bottle{
+  transform: rotate(-60deg);
+  right: 40%;
+}
+
+.trees-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: 3;
+  opacity: 1; 
+}
+
 .about-us-content {
-  max-width: 600px;
+  position: relative;
+  z-index: 2;
   transform: translateX(190px);
-  
 }
 
 .about-us h1 {
@@ -31,6 +62,7 @@
   font-size: 1.3em;
   text-align: center; 
 }
+
 .bottle-container {
   display: flex;
   justify-content: center;
@@ -41,5 +73,3 @@
   width: 400px;
   transform: translateX(-190px);
 }
-
-
