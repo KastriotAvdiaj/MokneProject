@@ -5,6 +5,12 @@ const PixiComponent = () => {
     const pixiContainerRef = useRef(null);
 
     useEffect(() => {
+        // Early return if the ref is not set
+        if (!pixiContainerRef.current) {
+            console.error('pixiContainerRef is not attached to a DOM element.');
+            return;
+        }
+
         // Create a new PixiJS application
         const app = new Application({
             backgroundColor: 0x1099bb,
@@ -15,31 +21,35 @@ const PixiComponent = () => {
         pixiContainerRef.current.appendChild(app.view);
 
         const setup = async () => {
-            // Load the grass texture
-            const texture = await Assets.load('https://pixijs.com/assets/bg_grass.jpg');
+            try {
+                // Load the grass texture
+                const texture = await Assets.load('https://pixijs.com/assets/bg_grass.jpg');
 
-            // Create a simple grass plane and add it to the stage
-            const plane = new MeshPlane(texture, 10, 10);
+                // Create a simple grass plane and add it to the stage
+                const plane = new MeshPlane(texture, 10, 10);
 
-            plane.x = 100;
-            plane.y = 100;
+                plane.x = 100;
+                plane.y = 100;
 
-            app.stage.addChild(plane);
+                app.stage.addChild(plane);
 
-            // Get the buffer for vertex positions.
-            const { buffer } = plane.geometry.getAttribute('aPosition');
+                // Get the buffer for vertex positions.
+                const { buffer } = plane.geometry.getAttribute('aPosition');
 
-            // Listen for animate update
-            let timer = 0;
+                // Listen for animate update
+                let timer = 0;
 
-            app.ticker.add(() => {
-                // Randomize the vertice positions a bit to create movement.
-                for (let i = 0; i < buffer.data.length; i++) {
-                    buffer.data[i] += Math.sin(timer / 10 + i) * 0.5;
-                }
-                buffer.update();
-                timer++;
-            });
+                app.ticker.add(() => {
+                    // Randomize the vertice positions a bit to create movement.
+                    for (let i = 0; i < buffer.data.length; i++) {
+                        buffer.data[i] += Math.sin(timer / 10 + i) * 0.5;
+                    }
+                    buffer.update();
+                    timer++;
+                });
+            } catch (error) {
+                console.error('Error setting up PixiJS application:', error);
+            }
         };
 
         setup();
