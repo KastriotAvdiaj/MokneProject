@@ -1,8 +1,9 @@
-import React, { useState, useRef,useEffect } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "./Contact.css";
-import { Stage, Container, Text, Sprite } from '@pixi/react';
+import { Stage, Container, Text, Sprite } from '@pixi/react'; // Ensure Sprite is imported correctly
 import Divider from "../../Components/Divider/Divider";
 import { FadeIn } from "../../Components/Reveal/FadeIn";
+import mokneLogo from '../../assets/iconLogo.png';
 
 export const Contact = () => {
   const [formData, setFormData] = useState({
@@ -13,9 +14,21 @@ export const Contact = () => {
 
   const bunnyUrl = 'https://pixijs.io/pixi-react/img/bunny.png';
   const bunnyRef = useRef();
-  const [animation, setAnimation] = useState(false);
-
+  const [animation, setAnimation] = useState(false);;
   const [rotation, setRotation] = useState(0);
+
+
+  const [logoRotation, setLogoRotation] = useState(0);
+  const logoRef = useRef();
+
+  useEffect(() => {
+    const animateLogo = () => {
+      setLogoRotation(prevRotation => prevRotation + 0.006); 
+      requestAnimationFrame(animateLogo);
+    };
+
+    animateLogo();
+  }, []);
 
   useEffect(() => {
     let animationFrameId;
@@ -47,12 +60,11 @@ export const Contact = () => {
     }));
   };
 
-
   const handleClick = () => {
     setAnimation(!animation);
-    setTimeout(()=>{
+    setTimeout(() => {
       setAnimation(false);
-    },2500)
+    }, 2500);
   };
 
   const handleSubmit = (e) => {
@@ -63,89 +75,101 @@ export const Contact = () => {
   return (
     <div className="contact-container">
       <FadeIn x={-100} y={0}>
-      <div className="contact-form-container">
-        <form className="contact-form" onSubmit={handleSubmit}>
-          <h2>Na Kontaktoni</h2>
-          <div>
-            <label htmlFor="name">Emri:</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              required
-            />
-          </div>
-          <div>
-            <label htmlFor="email">Email:</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-            />
-          </div>
-          <div>
-            <label htmlFor="message">Mesazhi:</label>
-            <textarea
-              id="message"
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-              required
-            ></textarea>
-          </div>
-          <Stage width={360} height={50} style={{ borderRadius: "0.2rem",cursor:"pointer" }} options={{ background: 0x1099bb }} onClick={handleClick}>
-            <Container>
-              {!animation ? (
-                <Text
-                  text="Dergo"
-                  x={180}
-                  y={25}
-                  anchor={{ x: 0.5, y: 0.5 }}
-                  style={{ fill: "white", fontSize: 16 }}
-                />
-              ) : (
-                <Sprite
-                  image={bunnyUrl}
-                  x={175}
-                  y={25}
-                  anchor={{ x: 0.5, y: 0.5 }}
-                  ref={bunnyRef}
-                  rotation={rotation}
-                />
-              )}  
-            </Container>
-          </Stage>
-        </form>
-      </div>
+        <div className="contact-form-container">
+          <form className="contact-form" onSubmit={handleSubmit}>
+            <h2>Na Kontaktoni</h2>
+            <div>
+              <label htmlFor="name">Emri:</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div>
+              <label htmlFor="email">Email:</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div>
+              <label htmlFor="message">Mesazhi:</label>
+              <textarea
+                id="message"
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                required
+              ></textarea>
+            </div>
+            <Stage width={360} height={50} style={{ borderRadius: "0.2rem", cursor: "pointer" }} options={{ background: 0x1099bb }} onClick={handleClick}>
+              <Container>
+                {!animation ? (
+                  <Text
+                    text="Dergo"
+                    x={180}
+                    y={25}
+                    anchor={{ x: 0.5, y: 0.5 }}
+                    style={{ fill: "white", fontSize: 21 }}
+                  />
+                ) : (
+                  <Sprite
+                    image={bunnyUrl}
+                    x={175}
+                    y={25}
+                    anchor={{ x: 0.5, y: 0.5 }}
+                    ref={bunnyRef}
+                    rotation={rotation}
+                  />
+                )}
+              </Container>
+            </Stage>
+          </form>
+        </div>
       </FadeIn>
       <FadeIn>
-        Hi
+      <Stage width={360} height={360} options={{ background: 0x1099bb }} style={{borderRadius:"100rem"}}>
+        <Container>
+          <Sprite
+            image={mokneLogo}
+            x={180}
+            y={180}
+            anchor={{ x: 0.5, y: 0.5 }}
+            ref={logoRef}
+            rotation={logoRotation}
+            scale={{ x: 0.16, y: 0.16 }}
+          />
+        </Container>
+      </Stage>
+
       </FadeIn>
       <FadeIn x={100} y={0}>
-      <div className="contact-info-container">
-        <p>Fabrika : Uji Mokne, Istog, Kosova</p>
-        <Divider/>
-        <p>Zip Code : 30000</p>
-        <Divider/>
-        <p>Istog, Kosova</p>
-        <Divider/>
-        <p>048 505 858</p>
-        <Divider/>
-        <p>hrmokne@gmail.com</p>
-        <Divider/>
-        <p>Per kontakt distribucioni ose porosi:</p>
-        <Divider/>
-        <p>import-export@mokne.ks</p>
-        <Divider/>
-        <p>www.mokne.ks</p>
-      </div>
+        <div className="contact-info-container">
+          <p>Fabrika : Uji Mokne, Istog, Kosova</p>
+          <Divider />
+          <p>Zip Code : 30000</p>
+          <Divider />
+          <p>Istog, Kosova</p>
+          <Divider />
+          <p>048 505 858</p>
+          <Divider />
+          <p>hrmokne@gmail.com</p>
+          <Divider />
+          <p>Per kontakt distribucioni ose porosi:</p>
+          <Divider />
+          <p>import-export@mokne.ks</p>
+          <Divider />
+          <p>www.mokne.ks</p>
+        </div>
       </FadeIn>
-
     </div>
   );
 };
