@@ -10,16 +10,14 @@ import bottlesVid from "../../assets/compressedVid.mp4";
 import { motion, useScroll, useTransform } from "framer-motion";
 import DividerWithLogo from "../../Components/Divider/DividerWithLogo";
 import Divider from "../../Components/Divider/Divider";
-import PixiComponent from "../../Components/PixiJs/PixiComponent";
 
 export const AboutUs = () => {
   const { scrollYProgress } = useScroll();
   const scale = useTransform(scrollYProgress, [0, 1], [1, 0.5]);
 
+  
   return (
     <div>
-
-    
       <div className="about-us-first-container">
         <div className="about-us-first">
           <Reveal>

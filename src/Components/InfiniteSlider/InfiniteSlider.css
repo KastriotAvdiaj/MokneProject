@@ -26,7 +26,7 @@
   width: 200px; /* Adjusted to match container height */
   height: 200px; /* Consistent size for all items */
   background-size: cover; /* Ensures the image covers the entire div */
-  background-position: center; /* Centers the image */
+  background-position: center; 
   border-radius: 6px;
   position: absolute;
   left: max(calc(200px * 8), 100%);

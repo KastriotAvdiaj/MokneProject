@@ -12,11 +12,12 @@
   "dependencies": {
     "@pixi/react": "^7.1.2",
     "framer-motion": "^11.2.6",
-    "pixi.js": "^8.1.5",
+    "pixi.js": "^7.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-intersection-observer": "^9.10.2",
-    "react-router-dom": "^6.23.1"
+    "react-router-dom": "^6.23.1",
+    "v7": "^1.0.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",

@@ -1,16 +1,25 @@
 .contact-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  display: grid;
+grid-template-columns: repeat(3, 1fr);
+grid-template-rows: 1fr;
+grid-column-gap: 2rem;
+align-items: center;
+place-items: center;
+padding: 2rem;
+  height: 100vh ;
   background-image: url('../../assets/whitemountain2.jpg'); /* Ensure the path is correct */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   color: #000000; /* Set text color to black */
+  font-family: var(--font-number-7);
 }
 
 .contact-form-container {
+  background-color: #0056b3;
+  box-shadow: 3px 8px 9px rgb(31, 31, 31);
+  border-radius: 0.2rem;
+  padding: 2rem;
   flex: 1;
   display: flex;
   justify-content: center;
@@ -18,14 +27,15 @@
 }
 
 .contact-form {
+  color: white;
   padding: 20px;
   width: 100%;
   max-width: 400px;
   border-radius: 10px;
-  color: #000000; 
 }
 
 .contact-form h2 {
+  font-size: 2rem;
   margin-bottom: 20px;
   text-align: center;
 }
@@ -47,6 +57,11 @@
   border: 1px solid #ddd;
   border-radius: 4px;
   color: #000000; 
+}
+
+.contact-form textarea{
+  max-height: 300px;
+  resize: vertical;
 }
 
 .contact-form button {
@@ -79,10 +94,14 @@
 }
 
 .contact-info-container {
-  font-size: 18px;
+  box-shadow: 3px 8px 9px rgb(31, 31, 31);
+  border-radius: 0.2rem;
+  grid-column: 3;
+  background-color: #0056b3;
+  padding: 2rem;
+  font-size: 20px;
   flex: 0.7;
-  padding: 20px;
-  color: #000000; 
+  color: white; 
 }
 
 .contact-info-container p {

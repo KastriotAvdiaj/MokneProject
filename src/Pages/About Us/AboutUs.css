@@ -67,16 +67,6 @@
   text-align: center;
 }
 
-/* 
-.about-us p {
-  font-family: var(--font-number-4);
-  margin: 15px 0;
-  line-height: 1.3;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
-  font-size: 1.3em;
-  text-align: center; 
-}
-*/
 
 .about-us-first {
   height: 100%;
@@ -88,11 +78,11 @@
 }
 
 .about-us-first-container {
-  height: 100vh; /* Make the container taller */
-  padding: 2rem; /* Add some padding to make the image appear larger */
+  height: 100vh; 
+  padding: 2rem;
   background-image: url('../../assets/sunrise.webp');
-  background-size: cover; /* Ensure it covers the container */
-  background-position: center; /* Center the image */
+  background-size: cover; 
+  background-position: center; 
 }
 
 .about-us-first h1 {
