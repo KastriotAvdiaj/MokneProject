@@ -69,7 +69,13 @@ export const AboutUs = () => {
           className="trees-overlay"
           style={{ backgroundImage: `url(${trees})` }}
         ></div>
-        <FadeIn position={"absolute"} top={0} right={40} y={-20} once={true}>
+        <FadeIn position={"absolute"} top={"10%"} left={"10%"} once={false}>
+        <div className="aboutUs-p-wrapper">
+        <p>Me mbi 100 puntëtorë. <br /><br />  Na gjeni në çdo supermarket afër jush.</p>
+        </div>
+        </FadeIn>
+
+        <FadeIn position={"absolute"} top={0} right={40} y={40} once={true}>
           <img src={Bottle} className="about-us-bottle" />
         </FadeIn>
         <FadeIn position={"absolute"} top={0} right={40} y={20} once={true}>
@@ -77,7 +83,6 @@ export const AboutUs = () => {
         </FadeIn>
         <div className="infiniteSlider-container">
           <InfiniteSlider />
-          
         </div>
       </div>
     </div>

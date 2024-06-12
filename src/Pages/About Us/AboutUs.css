@@ -15,18 +15,19 @@
   overflow: hidden;
 }
 
-.about-us-bottle, .about-us-bottle2{
+.about-us-bottle, .about-us-bottle2 {
   height: 400px;
   position: absolute;
   top: 0;
   z-index: 2;
 }
-.about-us-bottle2{
+
+.about-us-bottle2 {
   transform: rotate(-20deg);
   right: 25%;
 }
 
-.about-us-bottle{
+.about-us-bottle {
   transform: rotate(-60deg);
   right: 40%;
 }
@@ -40,7 +41,7 @@
   background-size: cover;
   background-position: center;
   z-index: 3;
-  opacity: 1; 
+  opacity: 1;
 }
 
 .about-us-content {
@@ -51,7 +52,7 @@
   width: 700px;
 }
 
-.infiniteSlider-container{
+.infiniteSlider-container {
   grid-row: 1/2;
   z-index: 3;
   width: 1600px;
@@ -63,9 +64,10 @@
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
   font-size: 3em;
   margin-bottom: 20px;
-  text-align: center; 
+  text-align: center;
 }
-/*  
+
+/* 
 .about-us p {
   font-family: var(--font-number-4);
   margin: 15px 0;
@@ -74,9 +76,9 @@
   font-size: 1.3em;
   text-align: center; 
 }
-  */
+*/
 
-.about-us-first{
+.about-us-first {
   height: 100%;
   width: 100%;
   display: flex;
@@ -85,12 +87,15 @@
   justify-content: center;
 }
 
-.about-us-first-container{
-  height: 100vh;
-  background-color: rgb(63, 138, 223);
+.about-us-first-container {
+  height: 100vh; /* Make the container taller */
+  padding: 2rem; /* Add some padding to make the image appear larger */
+  background-image: url('../../assets/sunrise.webp');
+  background-size: cover; /* Ensure it covers the container */
+  background-position: center; /* Center the image */
 }
 
-.about-us-first h1{
+.about-us-first h1 {
   font-family: var(--font-number-4);
   font-size: 100px;
   text-align: center;
@@ -98,40 +103,54 @@
 }
 
 .about-us-video {
-  height: 480px;
-  border-radius: 2px; 
-  
-}
-.under-h1-container{
-  padding: 0 4rem;
-  display: grid;
-grid-template-columns: repeat(3, 1fr);
-grid-template-rows: 1fr;
-grid-column-gap: 0px;
-grid-row-gap: 0px;
-place-items: center;
+  height: 440px;
+  border-radius: 2px;
 }
 
-.under-h1-container h3{
+.under-h1-container {
+  padding: 0 4rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  place-items: center;
+}
+
+.under-h1-container h3 {
   font-family: var(--font-number-7);
   text-align: center;
   font-size: 30px;
   color: rgb(255, 255, 255);
 }
 
-.about-us-video-container{
+.about-us-video-container {
   padding: 1rem;
   height: fit-content;
-  border-radius: 5px; 
+  border-radius: 5px;
   margin-bottom: 1rem;
   box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.5);
 }
 
-.firstH1-wrapper, .secondH1-wrapper{
-  height: 360px;
+.firstH1-wrapper, .secondH1-wrapper {
+  height: 340px;
   padding: 0.5rem 1.5rem;
-  border-radius: 5px; 
+  border-radius: 5px;
   background-color: rgb(209, 90, 11);
   box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.5);
+}
 
+.aboutUs-p-wrapper{
+  height: 200px;
+  display: grid;
+  place-items: center;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.5);
+  color: rgb(17, 17, 236);
+  font-weight: bolder;
+  font-family: var(--font-number-7);
+  background-color: rgb(238, 238, 238);
+  position: absolute;
+  font-size: 28px;
 }

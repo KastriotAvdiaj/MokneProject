@@ -37,7 +37,7 @@ export const FadeIn = ({
     }
   }, [controls, isInView]);
   return (
-    <div ref={ref}>
+    <div >
       <motion.div
         variants={revealAnimation}
         initial="hidden"
@@ -51,6 +51,7 @@ export const FadeIn = ({
           bottom: bottom,
           zIndex: 2,
         }}
+        ref={ref}
       >
         {children}
       </motion.div>
